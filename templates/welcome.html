@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Welcome! </title>
+  </head>
+
+  <body>
+    {% if {{user}} != "Sorry, your username is incorrect" && {{password}} != "Sorry, your password is incorrect" %}
+      Welcome {{un}} !
+    {% elif {{password}} == "Sorry, your password is incorrect" %}
+      {{pw}}
+    {% else %}
+      {{un}}
+    {% endif %}
+  </body>
+</html>
