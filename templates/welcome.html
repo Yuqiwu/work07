@@ -5,12 +5,17 @@
   </head>
 
   <body>
-    {% if {{user}} != "Sorry, your username is incorrect" && {{password}} != "Sorry, your password is incorrect" %}
-      Welcome {{un}} !
-    {% elif {{password}} == "Sorry, your password is incorrect" %}
+    {% if un != "Sorry, your username is incorrect" and pw != "Sorry, your password is incorrect" %}
+      Welcome {{un}}!
+    {% elif pw == "Sorry, your password is incorrect" %}
       {{pw}}
     {% else %}
       {{un}}
     {% endif %}
+    
+    <form method="POST" action="/logout">
+      <input type="submit" value="Logout">
+    </form>
+    
   </body>
 </html>
